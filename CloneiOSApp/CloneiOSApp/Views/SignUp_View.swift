@@ -18,6 +18,9 @@ struct SignUp_View : View {
     @State private var showingActionSheet = false
     @State private var imageData: Data = Data()
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State private var error: String = ""
+    @State private var showingAlert = false
+    @State private var alertTitle: String = "Oh No 😂"
     
     func loadImage()  {
         guard let inputImage = pickedImage else {
@@ -25,6 +28,43 @@ struct SignUp_View : View {
         }
         profileImage = inputImage
     }
+    
+    func errorCheck() -> String? {
+        
+        if email.trimmingCharacters(in: .whitespaces).isEmpty || password.trimmingCharacters(in: .whitespaces).isEmpty || username.trimmingCharacters(in: .whitespaces).isEmpty ||
+            imageData.isEmpty {
+            
+            return "Please fill in all fields and provide an image"
+        }
+        return nil
+    }
+    
+    func signUp() {
+        if let error = errorCheck() {
+            self.error = error
+            self.showingAlert = true
+            self.clear()
+            return
+        }
+        
+        AuthService.signUp(username: username, email: email, password: password, imageData: imageData, onSuccess: {
+            (user) in
+            self.clear()
+        }) {
+            (errorMessage) in
+            print("Error \(errorMessage)")
+            self.error = errorMessage
+            self.showingAlert = true
+            return
+        }
+    }
+    
+    func clear() {
+        self.email = ""
+        self.username = ""
+        self.password = ""
+    }
+    
     
     var body: some View {
         ScrollView {
@@ -50,7 +90,7 @@ struct SignUp_View : View {
                                     self.showingActionSheet = true
                                 }
                         } else {
-                            Image(systemName: "persion.circle.fill")
+                            Image(systemName: "person.circle.fill")
                                 .resizable()
                                 .clipShape(Circle())
                                 .frame(width: 100, height: 100)
@@ -68,19 +108,27 @@ struct SignUp_View : View {
                     FormField(value: $password, icon: "lock.fill", placeholder: "Password", isSecure: true)
                 }
                 
-                Button(action: {}) {
+                Button(action: signUp) {
                     Text("Sign Up")
                         .font(.title)
                         .modifier(ButtonModifiers())
+                }.alert(isPresented: $showingAlert) {
+                    Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
                 }
             }.padding()
         }.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(pickedImage: self.$pickedImage, showImagePicker: self.$showingImagePicker, imageData: self.$imageData)
         }.actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text(""), buttons: [.default(Text("Take A Photo")){
-                self.sourceType = .camera
-                self.showingImagePicker = true
-            }, .cancel()
+            ActionSheet(title: Text(""), buttons: [
+                .default(Text("Choose A Photo")){
+                    self.sourceType = .photoLibrary
+                    self.showingImagePicker = true
+            },
+                .default(Text("Take A Photo")){
+                    self.sourceType = .camera
+                    self.showingImagePicker = true
+            },
+                .cancel()
             ])
         }
     }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050326BF6C2F00E1EB8B /* SessionStore.swift */; };
+		F617050626BF71DD00E1EB8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050526BF71DD00E1EB8B /* HomeView.swift */; };
+		F617050826BF81D900E1EB8B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050726BF81D900E1EB8B /* Search.swift */; };
+		F617050A26BF81FC00E1EB8B /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050926BF81FC00E1EB8B /* Add.swift */; };
+		F617050C26BF822D00E1EB8B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050B26BF822D00E1EB8B /* Notifications.swift */; };
+		F617050E26BF824800E1EB8B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050D26BF824800E1EB8B /* Profile.swift */; };
+		F617051026BF826700E1EB8B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050F26BF826700E1EB8B /* Main.swift */; };
 		F6446F4126BE6E4B00EDCAC7 /* CloneiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6446F4026BE6E4B00EDCAC7 /* CloneiOSAppApp.swift */; };
 		F6446F4326BE6E4B00EDCAC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6446F4226BE6E4B00EDCAC7 /* ContentView.swift */; };
 		F6446F4526BE6E4B00EDCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6446F4426BE6E4B00EDCAC7 /* Assets.xcassets */; };
@@ -28,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F617050326BF6C2F00E1EB8B /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		F617050526BF71DD00E1EB8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F617050726BF81D900E1EB8B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		F617050926BF81FC00E1EB8B /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		F617050B26BF822D00E1EB8B /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		F617050D26BF824800E1EB8B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F617050F26BF826700E1EB8B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		F6446F3D26BE6E4B00EDCAC7 /* CloneiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6446F4026BE6E4B00EDCAC7 /* CloneiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneiOSAppApp.swift; sourceTree = "<group>"; };
 		F6446F4226BE6E4B00EDCAC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +131,12 @@
 			children = (
 				F6446F5326BE6E9800EDCAC7 /* SignInView.swift */,
 				F6446F5526BE6EB700EDCAC7 /* SignUp_View.swift */,
+				F617050526BF71DD00E1EB8B /* HomeView.swift */,
+				F617050726BF81D900E1EB8B /* Search.swift */,
+				F617050926BF81FC00E1EB8B /* Add.swift */,
+				F617050B26BF822D00E1EB8B /* Notifications.swift */,
+				F617050D26BF824800E1EB8B /* Profile.swift */,
+				F617050F26BF826700E1EB8B /* Main.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +163,7 @@
 			children = (
 				F6446F6D26BE881B00EDCAC7 /* AuthService.swift */,
 				F6446F6F26BE883800EDCAC7 /* StorageService.swift */,
+				F617050326BF6C2F00E1EB8B /* SessionStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,17 +247,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F617051026BF826700E1EB8B /* Main.swift in Sources */,
+				F617050E26BF824800E1EB8B /* Profile.swift in Sources */,
 				F6446F5B26BE6F5E00EDCAC7 /* ButtonModifiers.swift in Sources */,
 				F6446F6B26BE849600EDCAC7 /* Extensions.swift in Sources */,
+				F617050626BF71DD00E1EB8B /* HomeView.swift in Sources */,
+				F617050A26BF81FC00E1EB8B /* Add.swift in Sources */,
 				F6446F5926BE6F3F00EDCAC7 /* FormField.swift in Sources */,
 				F6446F6926BE741B00EDCAC7 /* UserModel.swift in Sources */,
+				F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */,
 				F6446F5126BE6E6F00EDCAC7 /* ImagePicker.swift in Sources */,
+				F617050C26BF822D00E1EB8B /* Notifications.swift in Sources */,
 				F6446F5626BE6EB700EDCAC7 /* SignUp_View.swift in Sources */,
 				F6446F4326BE6E4B00EDCAC7 /* ContentView.swift in Sources */,
 				F6446F6E26BE881B00EDCAC7 /* AuthService.swift in Sources */,
 				F6446F5426BE6E9800EDCAC7 /* SignInView.swift in Sources */,
 				F6446F7026BE883800EDCAC7 /* StorageService.swift in Sources */,
 				F6446F4126BE6E4B00EDCAC7 /* CloneiOSAppApp.swift in Sources */,
+				F617050826BF81D900E1EB8B /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

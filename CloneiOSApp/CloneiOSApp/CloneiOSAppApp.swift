@@ -15,7 +15,7 @@ struct CloneiOSAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SignInView()
+            ContentView().environmentObject(SessionStore())
         }
     }
 }
