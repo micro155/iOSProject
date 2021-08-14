@@ -52,7 +52,7 @@ struct SignUp_View : View {
             self.clear()
         }) {
             (errorMessage) in
-            print("Error \(errorMessage)")
+            
             self.error = errorMessage
             self.showingAlert = true
             return
@@ -63,6 +63,8 @@ struct SignUp_View : View {
         self.email = ""
         self.username = ""
         self.password = ""
+        self.imageData = Data()
+        self.profileImage = Image(systemName: "person.circle.fill")
     }
     
     
