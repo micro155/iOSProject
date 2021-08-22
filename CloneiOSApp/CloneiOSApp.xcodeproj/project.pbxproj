@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F607CDA826C89A7C00A9CDDD /* ClickPictureHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F607CDA726C89A7C00A9CDDD /* ClickPictureHeart.swift */; };
+		F607CDAA26C89E9100A9CDDD /* PostCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F607CDA926C89E9100A9CDDD /* PostCardImage.swift */; };
+		F607CDAC26C8A11B00A9CDDD /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F607CDAB26C8A11B00A9CDDD /* PostCard.swift */; };
 		F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050326BF6C2F00E1EB8B /* SessionStore.swift */; };
 		F617050626BF71DD00E1EB8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050526BF71DD00E1EB8B /* HomeView.swift */; };
 		F617050826BF81D900E1EB8B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050726BF81D900E1EB8B /* Search.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F607CDA726C89A7C00A9CDDD /* ClickPictureHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickPictureHeart.swift; sourceTree = "<group>"; };
+		F607CDA926C89E9100A9CDDD /* PostCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardImage.swift; sourceTree = "<group>"; };
+		F607CDAB26C8A11B00A9CDDD /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		F617050326BF6C2F00E1EB8B /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		F617050526BF71DD00E1EB8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F617050726BF81D900E1EB8B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				F617050B26BF822D00E1EB8B /* Notifications.swift */,
 				F617050D26BF824800E1EB8B /* Profile.swift */,
 				F617050F26BF826700E1EB8B /* Main.swift */,
+				F607CDA726C89A7C00A9CDDD /* ClickPictureHeart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				F6446F5826BE6F3F00EDCAC7 /* FormField.swift */,
 				F6446F5A26BE6F5E00EDCAC7 /* ButtonModifiers.swift */,
 				F6F51B2D26C7DAEF007AC804 /* ProfileHeader.swift */,
+				F607CDA926C89E9100A9CDDD /* PostCardImage.swift */,
+				F607CDAB26C8A11B00A9CDDD /* PostCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -274,11 +283,14 @@
 				F617050A26BF81FC00E1EB8B /* Post.swift in Sources */,
 				F6446F5926BE6F3F00EDCAC7 /* FormField.swift in Sources */,
 				F6446F6926BE741B00EDCAC7 /* UserModel.swift in Sources */,
+				F607CDA826C89A7C00A9CDDD /* ClickPictureHeart.swift in Sources */,
 				F6F51B3226C7ED26007AC804 /* ProfileService.swift in Sources */,
 				F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */,
+				F607CDAC26C8A11B00A9CDDD /* PostCard.swift in Sources */,
 				F6446F5126BE6E6F00EDCAC7 /* ImagePicker.swift in Sources */,
 				F617050C26BF822D00E1EB8B /* Notifications.swift in Sources */,
 				F6446F5626BE6EB700EDCAC7 /* SignUp_View.swift in Sources */,
+				F607CDAA26C89E9100A9CDDD /* PostCardImage.swift in Sources */,
 				F6446F4326BE6E4B00EDCAC7 /* ContentView.swift in Sources */,
 				F6446F6E26BE881B00EDCAC7 /* AuthService.swift in Sources */,
 				F6F51B2E26C7DAEF007AC804 /* ProfileHeader.swift in Sources */,

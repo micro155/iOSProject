@@ -34,6 +34,7 @@ class PostService {
         let postId = PostService.PostsUserId(userId: userId).collection("posts").document().documentID
         
         let storagePostRef = StorageService.storagePostId(postId: postId)
+        
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
         

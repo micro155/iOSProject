@@ -23,14 +23,16 @@ struct ProfileHeader: View {
                     .clipShape(Circle())
                     .frame(width: 100, height: 100, alignment: .trailing)
                     .padding(.leading)
+                
+                Text(user!.username).font(.headline).bold()
+                    .padding(.leading)
             } else {
                 Color.init(red: 0.9, green: 0.9, blue: 0.9)
                     .frame(width: 100, height: 100, alignment: .trailing)
                     .padding(.leading)
             }
             
-            Text(user!.username).font(.headline).bold()
-                .padding(.leading)
+            
         }
         VStack {
             HStack {

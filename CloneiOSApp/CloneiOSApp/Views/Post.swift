@@ -34,7 +34,6 @@ struct Post: View {
             self.clear()
             return
         }
-        self.clear()
         // firebase
         
         PostService.uploadPost(caption: text, imageData: imageData, onSuccess: {

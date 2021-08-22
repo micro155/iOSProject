@@ -81,11 +81,12 @@ class StorageService {
         
         storagePostRef.putData(imageData, metadata: metadata) {
             (StorageMetadata, error) in
-            
+
             if error != nil {
                 onError(error!.localizedDescription)
                 return
             }
+        
             
             storagePostRef.putData(imageData, metadata: metadata) {
                 (StorageMetadata, error) in
@@ -98,11 +99,12 @@ class StorageService {
                 storagePostRef.downloadURL {
                     (url, error) in
                     if let metaImageUrl = url?.absoluteString {
+                        
                         let firestorePostRef = PostService.PostsUserId(userId: userId).collection("posts").document(postId)
                         
                         let post = PostModel.init(caption: caption, likes: [:], geoLocation: "", ownerId: userId, postId: postId, username: Auth.auth().currentUser!.displayName!, profile: Auth.auth().currentUser!.photoURL!.absoluteString, mediaUrl: metaImageUrl, date: Date().timeIntervalSince1970, likeCount: 0)
                         
-                        guard let dict = try? post.asDictionary() else { return }
+                        guard let dict = try?post.asDictionary() else { return }
                         
                         firestorePostRef.setData(dict) {
                             (error) in
