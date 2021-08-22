@@ -16,10 +16,14 @@ struct Profile: View {
     
     let threeColumns = [GridItem(), GridItem(), GridItem()]
     
+    func listen() {
+        session.listen()
+    }
+    
     var body: some View {
         ScrollView {
         VStack {
-            ProfileHeader(user: self.session.session)
+            ProfileHeader(user: self.session.session, postsCount: profileService.posts.count, following: $profileService.following, followers: $profileService.followers)
             Button(action: {}) {
                 Text("Edit Profile")
                     .font(.title)
@@ -41,8 +45,23 @@ struct Profile: View {
                             .frame(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.height / 3).clipped()
                     }
                 }
+            } else {
+            if (self.session.session == nil) {
+                Text("")
+                
+            } else {
+                ScrollView {
+                    VStack {
+                        ForEach(self.profileService.posts, id: \.postId) { (post) in
+                            
+                            PostCardImage(post: post)
+                            PostCard(post: post)
+                            
+                        }
+                    }
+                }
             }
-            
+        }
         }
         
     }.navigationTitle("Profile")
