@@ -67,7 +67,10 @@ struct Profile: View {
     }.navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: Button(action: {}){
+            
+            NavigationLink(destination: UserProfile()) {
             Image(systemName: "person.fill")
+            }
         }, trailing: Button(action: {
             self.session.logout()
         }){
