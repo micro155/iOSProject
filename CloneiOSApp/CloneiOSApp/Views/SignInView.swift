@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct SignInView: View {
+    @EnvironmentObject var session: SessionStore
+    
+    func listen() {
+        session.listen()
+    }
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var error: String = ""
@@ -62,7 +68,9 @@ struct SignInView: View {
                     FormField(value: $email, icon: "envelope.fill", placeholder: "E-mail")
                     FormField(value: $password, icon: "lock.fill", placeholder: "Password", isSecure: true)
                     
-                    Button(action: signIn) {
+                Button(action: {signIn()
+                    listen()
+                }) {
                         Text("Sign In")
                             .font(.title)
                             .modifier(ButtonModifiers())

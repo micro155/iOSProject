@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct UserProfile: View {
     
@@ -25,7 +26,7 @@ struct UserProfile: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 SearchBar(value: $value).padding()
                     .onChange(of: value, perform: {
                       new in
@@ -35,8 +36,19 @@ struct UserProfile: View {
                     ForEach(users, id:\.uid) {
                         user in
                         HStack {
-                            Text("\(user.email)")
+                            WebImage(url: URL(string: user.profileImageUrl)!)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 60, height: 60, alignment: .trailing)
+                                .padding()
+                            
+                            Text(user.username)
+                                .font(.subheadline)
+                                .bold()
                         }
+                        Divider()
+                            .background(Color.black)
                         
                     }
                 }
