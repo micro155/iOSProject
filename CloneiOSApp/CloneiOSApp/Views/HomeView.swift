@@ -11,10 +11,14 @@ struct HomeView: View {
     
     var body: some View {
         
-        VStack {
-            CustomTabView()
+        NavigationView {
             
-        }
+            CustomTabView()
+                .navigationTitle("")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(true)
+            
+        }.accentColor(.red)
     }
 }
 
@@ -25,9 +29,9 @@ struct CustomTabView : View {
     @State var edge = UIApplication.shared.windows.first?.safeAreaInsets
     
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            
-            NavigationView {
+        
+        NavigationView {
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
                 TabView(selection: $selectedTab) {
                     Main()
                         .tag("house.fill")
@@ -40,31 +44,29 @@ struct CustomTabView : View {
                     Profile()
                         .tag("person.fill")
                 }
-            } .accentColor(.pink)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .ignoresSafeArea(.all, edges: .bottom)
-            
-            HStack(spacing: 0) {
-                ForEach(tabs, id: \.self) {
-                    image in
-                    TabButton(image: image, selectedTab: $selectedTab)
-                    
-                    if image != tabs.last {
-                        Spacer(minLength: 0)
+                HStack(spacing: 0) {
+                    ForEach(tabs, id: \.self) {
+                        image in
+                        TabButton(image: image, selectedTab: $selectedTab)
+                        
+                        if image != tabs.last {
+                            Spacer(minLength: 0)
+                        }
                     }
                 }
+                .padding(.horizontal, 25)
+                .padding(.vertical, 5)
+                .background(Color.white)
+                .clipShape(Capsule())
+                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 5, y: 5)
+                .shadow(color: Color.black.opacity(0.15), radius: 5, x: -5, y: -5)
+                .padding(.horizontal)
+                .padding(.bottom, edge!.bottom == 0 ? 20 : 0)
             }
-            .padding(.horizontal, 25)
-            .padding(.vertical, 5)
-            .background(Color.white)
-            .clipShape(Capsule())
-            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 5, y: 5)
-            .shadow(color: Color.black.opacity(0.15), radius: 5, x: -5, y: -5)
-            .padding(.horizontal)
-            .padding(.bottom, edge!.bottom == 0 ? 20 : 0)
-        }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
-        .background(Color.black.opacity(0.05).ignoresSafeArea(.all, edges: .all))
+        }.accentColor(.pink)
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .ignoresSafeArea(.all, edges: .bottom)
+        
     }
     
     

@@ -17,6 +17,10 @@
 		F617050C26BF822D00E1EB8B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050B26BF822D00E1EB8B /* Notifications.swift */; };
 		F617050E26BF824800E1EB8B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050D26BF824800E1EB8B /* Profile.swift */; };
 		F617051026BF826700E1EB8B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F617050F26BF826700E1EB8B /* Main.swift */; };
+		F6357A5726E4B70C00648B9F /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6357A5626E4B70C00648B9F /* EditProfile.swift */; };
+		F6357A5926E4BFCC00648B9F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6357A5826E4BFCC00648B9F /* Chat.swift */; };
+		F6357A5B26E4C14800648B9F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6357A5A26E4C14800648B9F /* Message.swift */; };
+		F6357A5D26E4C20100648B9F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6357A5C26E4C20100648B9F /* ChatService.swift */; };
 		F6446F4126BE6E4B00EDCAC7 /* CloneiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6446F4026BE6E4B00EDCAC7 /* CloneiOSAppApp.swift */; };
 		F6446F4326BE6E4B00EDCAC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6446F4226BE6E4B00EDCAC7 /* ContentView.swift */; };
 		F6446F4526BE6E4B00EDCAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6446F4426BE6E4B00EDCAC7 /* Assets.xcassets */; };
@@ -65,6 +69,10 @@
 		F617050B26BF822D00E1EB8B /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		F617050D26BF824800E1EB8B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F617050F26BF826700E1EB8B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F6357A5626E4B70C00648B9F /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		F6357A5826E4BFCC00648B9F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		F6357A5A26E4C14800648B9F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F6357A5C26E4C20100648B9F /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		F6446F3D26BE6E4B00EDCAC7 /* CloneiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6446F4026BE6E4B00EDCAC7 /* CloneiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneiOSAppApp.swift; sourceTree = "<group>"; };
 		F6446F4226BE6E4B00EDCAC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 				F6C5075926DA03150046FD67 /* UsersProfileView.swift */,
 				F6C5075F26DA706E0046FD67 /* CommentCardView.swift */,
 				F6C5076326DA75C60046FD67 /* CommentView.swift */,
+				F6357A5626E4B70C00648B9F /* EditProfile.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +216,8 @@
 				F6446F6826BE741B00EDCAC7 /* UserModel.swift */,
 				F6F291A026C7760800E0E081 /* PostModel.swift */,
 				F6C5075B26DA1C640046FD67 /* CommentModel.swift */,
+				F6357A5826E4BFCC00648B9F /* Chat.swift */,
+				F6357A5A26E4C14800648B9F /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +234,7 @@
 				F6E6BF2426D404A1008F3313 /* SearchService.swift */,
 				F6EC012D26D54F1500384AAA /* FollowService.swift */,
 				F6C5075D26DA1D420046FD67 /* CommentService.swift */,
+				F6357A5C26E4C20100648B9F /* ChatService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -319,7 +331,9 @@
 				F6C5075C26DA1C640046FD67 /* CommentModel.swift in Sources */,
 				F6E6BF2526D404A1008F3313 /* SearchService.swift in Sources */,
 				F6C5075E26DA1D420046FD67 /* CommentService.swift in Sources */,
+				F6357A5726E4B70C00648B9F /* EditProfile.swift in Sources */,
 				F6446F5926BE6F3F00EDCAC7 /* FormField.swift in Sources */,
+				F6357A5926E4BFCC00648B9F /* Chat.swift in Sources */,
 				F6E6BF2726D406C4008F3313 /* UserProfile.swift in Sources */,
 				F6446F6926BE741B00EDCAC7 /* UserModel.swift in Sources */,
 				F607CDA826C89A7C00A9CDDD /* ClickPictureHeart.swift in Sources */,
@@ -327,6 +341,7 @@
 				F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */,
 				F6C5075826D9FFD20046FD67 /* FollowButton.swift in Sources */,
 				F6C5075A26DA03150046FD67 /* UsersProfileView.swift in Sources */,
+				F6357A5D26E4C20100648B9F /* ChatService.swift in Sources */,
 				F607CDAC26C8A11B00A9CDDD /* PostCard.swift in Sources */,
 				F6446F5126BE6E6F00EDCAC7 /* ImagePicker.swift in Sources */,
 				F617050C26BF822D00E1EB8B /* Notifications.swift in Sources */,
@@ -343,6 +358,7 @@
 				F6F51B3026C7E8FD007AC804 /* PostCardService.swift in Sources */,
 				F6446F5426BE6E9800EDCAC7 /* SignInView.swift in Sources */,
 				F6446F7026BE883800EDCAC7 /* StorageService.swift in Sources */,
+				F6357A5B26E4C14800648B9F /* Message.swift in Sources */,
 				F6446F4126BE6E4B00EDCAC7 /* CloneiOSAppApp.swift in Sources */,
 				F617050826BF81D900E1EB8B /* Search.swift in Sources */,
 			);

@@ -13,6 +13,7 @@ struct Profile: View {
     @EnvironmentObject var session: SessionStore
     @State private var selection = 1
     @StateObject var profileService = ProfileService()
+    @State private var isLinkActive = false
     
     let threeColumns = [GridItem(), GridItem(), GridItem()]
     
@@ -24,12 +25,21 @@ struct Profile: View {
         ScrollView {
         VStack {
             ProfileHeader(user: self.session.session, postsCount: profileService.posts.count, following: $profileService.following, followers: $profileService.followers)
-            Button(action: {}) {
+            VStack(alignment: .leading) {
+                Text(session.session?.bio ?? "")
+                    .font(.headline)
+                    .lineLimit(1)
+            }
+            
+            NavigationLink(destination: EditProfile(session: self.session.session), isActive: $isLinkActive) {
+            
+            Button(action: {self.isLinkActive = true}) {
                 Text("Edit Profile")
                     .font(.title)
                     .modifier(ButtonModifiers())
                     
             }.padding(.horizontal)
+            }
             Picker("", selection: $selection) {
                 Image(systemName: "circle.grid.2x2.fill").tag(0)
                 Image(systemName: "person.circle").tag(1)

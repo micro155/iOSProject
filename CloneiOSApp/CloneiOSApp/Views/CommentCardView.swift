@@ -29,7 +29,7 @@ struct CommentCardView: View {
             
             Spacer()
             
-            Text((Date(timeIntervalSince1970: comment.date)).timeAgo() + "ago")
+            Text((Date(timeIntervalSince1970: comment.date)).timeAgo() + " ago")
                 .font(.subheadline)
             
             

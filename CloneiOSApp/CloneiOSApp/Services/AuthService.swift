@@ -30,7 +30,7 @@ class AuthService {
             
             guard let userId = authData?.user.uid else { return }
             
-            let storageProfileUserId = StorageService.storageProfileID(userId: userId)
+            let storageProfileUserId = StorageService.storageProfileId(userId: userId)
             
             let metadata = StorageMetadata()
             metadata.contentType = "image/jpg"
