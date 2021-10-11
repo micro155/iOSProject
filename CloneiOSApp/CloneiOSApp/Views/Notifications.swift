@@ -10,6 +10,8 @@ import SwiftUI
 struct Notifications: View {
     var body: some View {
         Text("Notifications")
+            .navigationTitle("Notifications")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 

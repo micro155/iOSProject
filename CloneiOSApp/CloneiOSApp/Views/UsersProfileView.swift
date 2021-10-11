@@ -53,8 +53,14 @@ struct UsersProfileView: View {
             }
             
         }
-        .navigationBarTitle(Text(self.user.username))
+        .navigationTitle(Text(self.user.username))
+        .navigationBarItems(trailing: NavigationLink(destination: ChatLayoutView()) {
+            Image(systemName: "message.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        })
         .onAppear {
+            print("chat_enter")
             self.profileService.loadUserPosts(userId: self.user.uid)
         }
         

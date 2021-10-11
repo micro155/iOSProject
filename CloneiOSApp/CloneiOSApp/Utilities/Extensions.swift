@@ -5,7 +5,8 @@
 //  Created by 백동열 on 2021/08/07.
 //
 
-import Foundation
+import SwiftUI
+import SwiftyChat
 
 extension Encodable {
     func asDictionary() throws -> [String: Any] {
@@ -54,6 +55,31 @@ extension Date {
         formatter.maximumUnitCount = 1
         return String(format: formatter.string(from: self, to: Date()) ?? "", locale: .current)
     }
+}
+
+let futuraFont = Font.custom("Futura", size: 17)
+
+internal extension ChatMessageCellStyle {
+    
+    static let basicStyle = ChatMessageCellStyle(
+        incomingTextStyle: .init(
+            textStyle: .init(textColor: .black, font: futuraFont),
+            textPadding: 16,
+            attributedTextStyle: .init(textColor: .black),
+            cellBackgroundColor: Color(#colorLiteral(red: 0.7861273885, green: 0.7897668481, blue: 0.7986581922, alpha: 1)),
+            cellBorderWidth: 0,
+            cellShadowRadius: 0
+        ),
+        outgoingTextStyle: .init(
+            textStyle: .init(textColor: .white, font: futuraFont),
+            textPadding: 16,
+            cellBackgroundColor: Color(#colorLiteral(red: 0.1405690908, green: 0.1412397623, blue: 0.25395751, alpha: 1)),
+            cellBorderWidth: 0,
+            cellShadowRadius: 0
+        ),
+        incomingAvatarStyle: .init(imageStyle: .init(imageSize: .zero))
+    )
+    
 }
 
 

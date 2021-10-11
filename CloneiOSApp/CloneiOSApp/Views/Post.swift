@@ -94,7 +94,10 @@ struct Post: View {
             }.alert(isPresented: $showingAlert) {
                 Alert(title: Text(alertTitle), message: Text(error), dismissButton: .default(Text("OK")))
             }
-        }.padding()
+        }
+        .navigationBarTitle("Post", displayMode: .inline)
+        .navigationBarTitleDisplayMode(.inline)
+        .padding()
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(pickedImage: self.$pickedImage, showImagePicker: self.$showingImagePicker, imageData: self.$imageData)
         }.actionSheet(isPresented: $showingActionSheet) {

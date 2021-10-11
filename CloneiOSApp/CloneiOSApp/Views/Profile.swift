@@ -74,7 +74,8 @@ struct Profile: View {
         }
         }
         
-    }.navigationTitle("Profile")
+    }
+        .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: Button(action: {}){
             
