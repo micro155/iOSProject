@@ -52,6 +52,8 @@
 		F6E6BF2326D402C3008F3313 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6BF2226D402C3008F3313 /* SearchBar.swift */; };
 		F6E6BF2526D404A1008F3313 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6BF2426D404A1008F3313 /* SearchService.swift */; };
 		F6E6BF2726D406C4008F3313 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6BF2626D406C4008F3313 /* UserProfile.swift */; };
+		F6EB588927256C0D008F9714 /* BasicChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB588827256C0D008F9714 /* BasicChatView.swift */; };
+		F6EB588B2725738B008F9714 /* ChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB588A2725738B008F9714 /* ChattingView.swift */; };
 		F6EC012E26D54F1500384AAA /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC012D26D54F1500384AAA /* FollowService.swift */; };
 		F6F291A126C7760800E0E081 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F291A026C7760800E0E081 /* PostModel.swift */; };
 		F6F291A326C7787A00E0E081 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F291A226C7787A00E0E081 /* PostService.swift */; };
@@ -102,6 +104,8 @@
 		F6E6BF2226D402C3008F3313 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F6E6BF2426D404A1008F3313 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		F6E6BF2626D406C4008F3313 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F6EB588827256C0D008F9714 /* BasicChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatView.swift; sourceTree = "<group>"; };
+		F6EB588A2725738B008F9714 /* ChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingView.swift; sourceTree = "<group>"; };
 		F6EC012D26D54F1500384AAA /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		F6F291A026C7760800E0E081 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		F6F291A226C7787A00E0E081 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				F6C5076326DA75C60046FD67 /* CommentView.swift */,
 				F6357A5626E4B70C00648B9F /* EditProfile.swift */,
 				F6B7AE1E26F82301001DEBAA /* ChatLayoutView.swift */,
+				F6EB588827256C0D008F9714 /* BasicChatView.swift */,
+				F6EB588A2725738B008F9714 /* ChattingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				F617050E26BF824800E1EB8B /* Profile.swift in Sources */,
 				F6446F5B26BE6F5E00EDCAC7 /* ButtonModifiers.swift in Sources */,
 				F6446F6B26BE849600EDCAC7 /* Extensions.swift in Sources */,
+				F6EB588927256C0D008F9714 /* BasicChatView.swift in Sources */,
 				F6B7AE1F26F82301001DEBAA /* ChatLayoutView.swift in Sources */,
 				F6C5076426DA75C60046FD67 /* CommentView.swift in Sources */,
 				F617050626BF71DD00E1EB8B /* HomeView.swift in Sources */,
@@ -357,6 +364,7 @@
 				F6F51B3226C7ED26007AC804 /* ProfileService.swift in Sources */,
 				F617050426BF6C2F00E1EB8B /* SessionStore.swift in Sources */,
 				F6C5075826D9FFD20046FD67 /* FollowButton.swift in Sources */,
+				F6EB588B2725738B008F9714 /* ChattingView.swift in Sources */,
 				F6C5075A26DA03150046FD67 /* UsersProfileView.swift in Sources */,
 				F6357A5D26E4C20100648B9F /* ChatService.swift in Sources */,
 				F607CDAC26C8A11B00A9CDDD /* PostCard.swift in Sources */,
